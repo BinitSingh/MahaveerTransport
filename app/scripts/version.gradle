@@ -1,0 +1,59 @@
+apply from: "scripts/lib_version.gradle"
+
+ext {
+
+}
+// androidx libraries
+def androidX = [:]
+androidX.coreKtx = "androidx.core:core-ktx:$coreKtx"
+androidX.appcompat = "androidx.appcompat:appcompat:$appcompat"
+androidX.material = "com.google.android.material:material:$material"
+androidX.constraintlayout = "androidx.constraintlayout:constraintlayout:$constraintlayout"
+androidX.fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentKtx"
+androidX.navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$navigationFragmentKtx"
+androidX.avigationUIKtx = "androidx.navigation:navigation-ui-ktx:$navigationUIKtx"
+androidX.lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:$runTimeLifecycle"
+ext.androidX = androidX
+// DI - Hilt
+def hilt= [:]
+hilt.hiltAdroid = "com.google.dagger:hilt-android:$hiltAdroid"
+hilt.hiltAnnotationCompiler = "com.google.dagger:hilt-android:$hiltGoogleCompiler"
+hilt.hiltLifecycleViewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltLifecycleViewmodel"
+hilt.hiltCompiler = "androidx.hilt:hilt-compiler:$hiltCompiler"
+ext.hilt = hilt
+// Networking - Retrofit + Moshi converter
+def network = [:]
+network.retrofit = "com.squareup.retrofit2:retrofit:$retrofit"
+network.converterMoshi = "com.squareup.retrofit2:converter-moshi:$converterMoshi"
+network.moshiKotlin = "com.squareup.moshi:moshi-kotlin:$moshiKotlin"
+network.moshiKotlinCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$moshiKotlinCodegen"
+network.okhttp = "com.squareup.okhttp3:okhttp:$okhttp"
+network.loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor"
+network.kotlinCoroutinesAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$kotlinCoroutinesAdapter"
+ext.network = network
+// Glide
+def glidelib = [:]
+glidelib.glide = "com.github.bumptech.glide:glide:$glide"
+glidelib.preferenceKtx = "androidx.preference:preference-ktx:$preferenceKtx"
+glidelib.glideCompiler = "com.github.bumptech.glide:compiler:$glideCompiler"
+ext.glidelib = glidelib
+//unit test
+def unitTest = [:]
+unitTest.junit = "junit:junit:$junit"
+unitTest.testRunner = "androidx.test:runner:$testRunner"
+unitTest.testCore = "androidx.test:core:$testCore"
+unitTest.junitktx = "androidx.test.ext:junit-ktx:$junitktx"
+unitTest.coreTesting = "androidx.arch.core:core-testing:$coreTesting"
+unitTest.mockitoInline = "org.mockito:mockito-inline:$mockitoInline"
+unitTest.kotlinxCoroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinxCoroutinesTest"
+unitTest.mockwebserver = "com.squareup.okhttp3:mockwebserver:$mockwebserver"
+unitTest.androidx_junit = "androidx.test.ext:junit:$androidx_junit"
+ext.unitTest = unitTest
+//unit test
+def uiTesting = [:]
+uiTesting.espressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:$espressoIdlingResource"
+uiTesting.espressoCore = "androidx.test.espresso:espresso-core:$espressoCore"
+uiTesting.espressoContrib = "androidx.test.espresso:espresso-contrib:$espressoContrib"
+uiTesting.navigationTesting = "androidx.navigation:navigation-testing:$navigationTesting"
+//uiTesting.fragmentUITesting = "androidx.fragment:fragment-testing:$fragmentUiTesting"
+ext.uiTesting = uiTesting

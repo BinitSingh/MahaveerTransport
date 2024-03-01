@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">MahaveerTransport</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="year">Release Year : %1$s</string>
+    <string name="crew">Crew : %1$s</string>
+    <string name="imdb_rating">IMDB Rating : %1$s </string>
+    <string name="title_label">Title:</string>
+    <string name="crew_label">Crew:</string>
+    <string name="rating_label">IMDB rating:</string>
+    <string name="rating_count_label">Rating Count:</string>
+    <string name="year_relase">Year:</string>
 </resources>

@@ -1,0 +1,17 @@
+// This task will copy the .apk to root build file folder and rename with timestamp
+def getDebugApk = tasks.register('getDebugApk', Copy) {
+    from("${project.buildDir}/outputs/apk/debug/app-debug.apk")
+    into("${rootProject.buildDir}/apk")
+    rename { fileName ->
+        fileName = "CodeDemo - ${dateSuffix()}.apk"
+        return fileName
+    }
+}
+//tasks getDebugApk
+
+private def dateSuffix() {
+    def format = '.YYMMdd.HHmmss.SSS'
+    def date = new Date()
+    return date.format(format)
+}
+

@@ -1,0 +1,18 @@
+dependencies {
+    // unit test
+    testImplementation unitTest.junit
+    androidTestImplementation unitTest.testRunner
+    androidTestImplementation unitTest.testCore
+    androidTestImplementation unitTest.junitktx
+    testImplementation unitTest.coreTesting
+    testImplementation unitTest.mockitoInline
+    testImplementation unitTest.kotlinxCoroutinesTest
+    testImplementation unitTest.mockwebserver
+    androidTestImplementation unitTest.androidx_junit
+    //ui test
+    implementation uiTesting.espressoIdlingResource
+    androidTestImplementation uiTesting.espressoCore
+    androidTestImplementation uiTesting.espressoContrib
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentUiTesting"
+    androidTestImplementation  uiTesting.navigationTesting
+}
