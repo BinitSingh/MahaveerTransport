@@ -8,4 +8,55 @@
     <string name="rating_label">IMDB rating:</string>
     <string name="rating_count_label">Rating Count:</string>
     <string name="year_relase">Year:</string>
+    
+    
+    <string name="login_title">Lorry Login/Register</string>
+    <string name="registration_title">Lorry Supplier Registration</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_conf_password">Confirm Password</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_basic_info">Basic Info</string>
+    <string name="txt_name_of_company">Name of Individual/Company/HUF/Firm</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_prm_email_id">Username/Primary Email ID</string>
+    <string name="txt_sec_email_id">Secondary Email ID</string>
+    <string name="txt_register_as">Register as</string>
+    <string name="txt_category">Category</string>
+    <string name="txt_pan">PAN No.</string>
+    <string name="txt_pan_image">PAN Image(Tap to pick image)</string>
+    <string name="txt_gst_no">GST No</string>
+    <string name="txt_contact_detail">Contact Detail</string>
+    <string name="txt_address_line_1">Address Line 1</string>
+    <string name="txt_address_line_2">Address Line 2</string>
+    <string name="txt_address_line_3">Address Line 3</string>
+    <string name="txt_city">City</string>
+    <string name="txt_pin_code">Pin Code</string>
+    <string name="txt_mobile_1">Mobile 1</string>
+    <string name="txt_mobile_2">Mobile 2</string>
+    <string name="txt_mobile_3">Mobile 3</string>
+    <string name="txt_state">State</string>
+    <string name="txt_vehicle_type">Vehicle Type</string>
+    <string name="txt_car_container">Car carrier container</string>
+    <string name="txt_station">Station</string>
+    <string name="txt_bank_info">Bank Info</string>
+    <string name="txt_account_name">Account Name</string>
+    <string name="txt_bank_name">Bank Name &amp; Branch</string>
+    <string name="txt_account_no">Account No.</string>
+    <string name="txt_rtgs">RTGS/IFSC</string>
+    <string name="txt_company_auth">Company Authorized Signatory</string>
+    <string name="txt_designation">Designation</string>
+    <string name="txt_tds_info">TDS Info</string>
+    <string name="txt_tds_above">TDS above</string>
+    <string name="txt_tds_exmp">TDS Exemption</string>
+    <string name="txt_tds">TDS</string>
+    <string name="txt_upto_limit">% upto limit of</string>
+    <string name="txt_after_limit">% after limit mentioned</string>
+    <string name="txt_exemption_upto">Exemption value upto</string>
+    <string name="txt_tds_declaration">TDS Declaration S.No.</string>
+    <string name="txt_effective_date">Effective from date</string>
+    <string name="txt_save">Save</string>
+
+
 </resources>

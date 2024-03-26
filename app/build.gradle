@@ -39,7 +39,7 @@ android {
 
         debug {
             buildConfigField("String", "API_KEY", "\"k_td0laha7\"")
-            buildConfigField("String", "BASE_URL", "\"https://imdb-api.com/\"")
+            buildConfigField("String", "BASE_URL", "\"http://mobile.mahaveeratransport.com:8087/\"")
         }
     }
     compileOptions {

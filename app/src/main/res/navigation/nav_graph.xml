@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/movieListFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/movieListFragment"
         android:name="com.mobile.mahaveertransport.presentation.view.userinterface.MovieListFragment"
-        android:label="MovieList" >
+        android:label="MovieList">
         <action
             android:id="@+id/action_show_moviedetail"
             app:destination="@id/movieDetailFragment" />
@@ -16,4 +16,16 @@
         android:id="@+id/movieDetailFragment"
         android:name="com.mobile.mahaveertransport.presentation.view.userinterface.MovieDetailFragment"
         android:label="MovieDetailFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mobile.mahaveertransport.presentation.view.userinterface.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.mobile.mahaveertransport.presentation.view.userinterface.RegistrationFragment"
+        android:label="RegistrationFragment" />
 </navigation>

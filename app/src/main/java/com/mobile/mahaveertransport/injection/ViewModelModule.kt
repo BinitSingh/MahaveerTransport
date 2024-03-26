@@ -1,14 +1,11 @@
 package com.mobile.mahaveertransport.injection
 
-import com.mobile.mahaveertransport.data.model.MovieItemsListResponse
 import com.mobile.mahaveertransport.data.repository.MovieRepositoryImpl
 import com.mobile.mahaveertransport.data.webservice.IDataSource
-import com.mobile.mahaveertransport.domain.EntityMapper
-import com.mobile.mahaveertransport.domain.datamodel.Movie
+import com.mobile.mahaveertransport.domain.repository.IMovieRepository
+import com.mobile.mahaveertransport.domain.usecase.AppDataUseCase
+import com.mobile.mahaveertransport.domain.usecase.AuthenticationUseCase
 import com.mobile.mahaveertransport.domain.usecase.MovieListUseCase
-import com.mobile.mahaveertransport.injection.CoroutineScopeDefault
-import com.mobile.mahaveertransport.injection.CoroutineScopeIO
-import com.mobile.mahaveertransport.injection.MovieListMappingAnnotation
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,11 +18,9 @@ object ViewModelModule {
 
     @Provides
     fun provideMovieRepository(
-        dataSource: IDataSource,
-        @MovieListMappingAnnotation
-        mapper: EntityMapper<MovieItemsListResponse, List<Movie>>
-    ): MovieRepositoryImpl =
-        MovieRepositoryImpl(dataSource, mapper)
+        dataSource: IDataSource
+    ): IMovieRepository =
+        MovieRepositoryImpl(dataSource)
 
     @Provides
     fun provideMovieListUseCase(
@@ -33,4 +28,18 @@ object ViewModelModule {
         @CoroutineScopeDefault
         dispatcher: CoroutineDispatcher
     ): MovieListUseCase = MovieListUseCase(repository, dispatcher)
+
+    @Provides
+    fun provideAuthenticationUseCase(
+        repository: IMovieRepository,
+        @CoroutineScopeDefault
+        dispatcher: CoroutineDispatcher
+    ): AuthenticationUseCase = AuthenticationUseCase(repository, dispatcher)
+
+    @Provides
+    fun provideAppDataUseCase(
+        repository: IMovieRepository,
+        @CoroutineScopeDefault
+        dispatcher: CoroutineDispatcher
+    ): AppDataUseCase = AppDataUseCase(repository, dispatcher)
 }
